@@ -20,14 +20,19 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^11.0.1",
+    "@nestjs/common": "^11",
     "@nestjs/config": "^4.0.2",
-    "@nestjs/core": "^11.0.1",
-    "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/core": "^11",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/platform-express": "^11",
+    "@nestjs/swagger": "^8.1.1",
     "@prisma/client": "^6.15.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
     "prisma": "^6.15.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -51,8 +56,12 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.5",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -70,5 +79,6 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
